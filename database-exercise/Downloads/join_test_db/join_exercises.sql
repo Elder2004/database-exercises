@@ -31,7 +31,7 @@ from employees e
 WHERE de.to_date >= curdate()
 ORDER BY d.dept_name;
 
--- 3. Find the name of all departments currently managed by women.
+-- 3.  Name of all departments currently managed by women.
 
 select d.dept_name as 'Department Name', concat(e.first_name, ' ', e.last_name
 ) as 'Department Manager'
@@ -41,7 +41,7 @@ from employees e
 where e.gender = 'F' and  dm.to_date >= curdate()
 ORDER BY d.dept_name;
 
--- 4. Find the current titles of employees currently working in the Customer Service department.
+-- 4. Current titles of employees currently working in the Customer Service department.
 
 select t.title, count(e.emp_no)
 from titles t

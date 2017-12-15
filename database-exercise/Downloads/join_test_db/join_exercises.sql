@@ -63,12 +63,3 @@ where dm.to_date >= curdate() and s.to_date >= curdate()
 ORDER BY d.dept_name;
 
 
-# For the subqueries lecture, this will bring the first 10 managers of the employees table using a sub query
-
-SELECT first_name, last_name, birth_date
-FROM employees
-WHERE emp_no IN (
-  SELECT emp_no
-  FROM dept_manager
-)
-LIMIT 10;

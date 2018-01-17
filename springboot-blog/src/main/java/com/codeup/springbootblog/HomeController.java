@@ -15,6 +15,10 @@ public class HomeController {
     public String showLandingPage() {
             return "This is the landing page!";
         }
+        @GetMapping("/roll-dice")
+    public String rollingDice(){
+        return  "Enter a Number....";
+        }
     }
 
 

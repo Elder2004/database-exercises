@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: main-header('View post')"></head>
+<body>
+<nav th:replace="fragments/navbar :: mainNavbar"></nav>
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1 class="text-center"> com.codeup.springbootblog.models.Post</h1>
+        <form>
+                th:include="posts/form :: form"
+                th:object="${post}"
+                method="post"
+                th:action="${'/posts/' + post.id + '/edit'}" <form/>
+
+    </div>
+    </div>
+<footer th:include="fragments/footer :: footer"></footer>
+
+</body>
+</html>

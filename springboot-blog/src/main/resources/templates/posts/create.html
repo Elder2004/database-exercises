@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head th:replace="fragments/head :: main-header('View post')"></head>
+<body>
+<nav th:replace="fragments/navbar :: mainNavbar"></nav>
+
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1 class="text-center">Create A Post</h1>
+        <form action="/posts/form" method="post" th:object="${post}">
+            <br />
+            Title:
+            <input th:field="*{title}" />
+            <br />
+            <br />
+            Description:
+            <input th:field="*{body}" />
+            <br />
+            <input type="submit" />
+        </form>
+    </div>
+</div>
+
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>

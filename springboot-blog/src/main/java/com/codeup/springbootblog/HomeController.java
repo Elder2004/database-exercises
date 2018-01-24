@@ -9,16 +9,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class HomeController {
 
 
-    @ResponseBody
-
         @GetMapping("/")
     public String showLandingPage() {
-            return "This is the landing page!";
+            return "home";
         }
-        @GetMapping("/roll-dice")
-    public String rollingDice(){
-        return  "Enter a Number....";
-        }
+
     }
 
 

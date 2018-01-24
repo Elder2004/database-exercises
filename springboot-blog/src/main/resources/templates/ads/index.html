@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head th:replace="fragments/head :: main-header('All the Post')"></head>
+<body>
+
+<nav th:replace="fragments/navbar :: mainNavbar"></nav>
+
+<!-- Content of the page -->
+<div th:each="post : ${post}">
+    <h1 th:text="${post.title}"></h1>
+    <p th:text="${post.description}"></p>
+    <img th:each="img : ${post.images}" th:src="${img.url}" />
+    Username:<p th:text="${post.user.username}"></p>
+</div>
+
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>
